@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{b20c5bef-c56d-47d7-923e-81f5ad5e69be}</ProjectGuid>
+    <RootNamespace>opcuaserver</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IntDir>lib\$(Configuration)$(PlatformArchitecture)$(PlatformToolset)\$(ProjectName)\</IntDir>
+    <OutDir>lib\$(Configuration)$(PlatformArchitecture)$(PlatformToolset)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IntDir>lib\$(Configuration)$(PlatformArchitecture)$(PlatformToolset)\$(ProjectName)\</IntDir>
+    <OutDir>lib\$(Configuration)$(PlatformArchitecture)$(PlatformToolset)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IntDir>lib\$(Configuration)$(PlatformArchitecture)$(PlatformToolset)\$(ProjectName)\</IntDir>
+    <OutDir>lib\$(Configuration)$(PlatformArchitecture)$(PlatformToolset)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IntDir>lib\$(Configuration)$(PlatformArchitecture)$(PlatformToolset)\$(ProjectName)\</IntDir>
+    <OutDir>lib\$(Configuration)$(PlatformArchitecture)$(PlatformToolset)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_WINSOCK_DEPRECATED_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0600;_DEBUG</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>D:\boost_1_81_0;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_WINSOCK_DEPRECATED_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0600;NDEBUG</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>D:\boost_1_81_0;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_WINSOCK_DEPRECATED_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0600;_DEBUG</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>D:\boost_1_81_0;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_WINSOCK_DEPRECATED_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0600;NDEBUG</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>D:\boost_1_81_0;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectReference Include="opcuacore.vcxproj">
+      <Project>{ef98fe96-97a7-4b23-b71e-45f8319469cc}</Project>
+    </ProjectReference>
+    <ProjectReference Include="opcuaprotocol.vcxproj">
+      <Project>{393dd23b-b1da-42c0-8d81-426e7f4ea1fc}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\server\address_space_addon.cpp" />
+    <ClCompile Include="src\server\address_space_internal.cpp" />
+    <ClCompile Include="src\server\asio_addon.cpp" />
+    <ClCompile Include="src\server\common_addons.cpp" />
+    <ClCompile Include="src\server\endpoints_parameters.cpp" />
+    <ClCompile Include="src\server\endpoints_registry.cpp" />
+    <ClCompile Include="src\server\endpoints_services_addon.cpp" />
+    <ClCompile Include="src\server\internal_subscription.cpp" />
+    <ClCompile Include="src\server\opc_tcp_async.cpp" />
+    <ClCompile Include="src\server\opc_tcp_async_addon.cpp" />
+    <ClCompile Include="src\server\opc_tcp_async_parameters.cpp" />
+    <ClCompile Include="src\server\opc_tcp_processor.cpp" />
+    <ClCompile Include="src\server\server.cpp" />
+    <ClCompile Include="src\server\server_object.cpp" />
+    <ClCompile Include="src\server\server_object_addon.cpp" />
+    <ClCompile Include="src\server\services_registry_factory.cpp" />
+    <ClCompile Include="src\server\services_registry_impl.cpp" />
+    <ClCompile Include="src\server\standard_address_space.cpp" />
+    <ClCompile Include="src\server\standard_address_space_addon.cpp" />
+    <ClCompile Include="src\server\standard_address_space_part10.cpp" />
+    <ClCompile Include="src\server\standard_address_space_part11.cpp" />
+    <ClCompile Include="src\server\standard_address_space_part13.cpp" />
+    <ClCompile Include="src\server\standard_address_space_part3.cpp" />
+    <ClCompile Include="src\server\standard_address_space_part4.cpp" />
+    <ClCompile Include="src\server\standard_address_space_part5.cpp" />
+    <ClCompile Include="src\server\standard_address_space_part6.cpp" />
+    <ClCompile Include="src\server\standard_address_space_part8.cpp" />
+    <ClCompile Include="src\server\standard_address_space_part9.cpp" />
+    <ClCompile Include="src\server\subscription_service_addon.cpp" />
+    <ClCompile Include="src\server\subscription_service_internal.cpp" />
+    <ClCompile Include="src\server\tcp_server.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\server\address_space_addon.h" />
+    <ClInclude Include="src\server\address_space_internal.h" />
+    <ClInclude Include="src\server\endpoints_parameters.h" />
+    <ClInclude Include="src\server\internal_subscription.h" />
+    <ClInclude Include="src\server\opcua_protocol.h" />
+    <ClInclude Include="src\server\opc_tcp_async_parameters.h" />
+    <ClInclude Include="src\server\opc_tcp_processor.h" />
+    <ClInclude Include="src\server\server_object.h" />
+    <ClInclude Include="src\server\server_object_addon.h" />
+    <ClInclude Include="src\server\standard_address_space_parts.h" />
+    <ClInclude Include="src\server\subscription_service_internal.h" />
+    <ClInclude Include="src\server\tcp_server.h" />
+    <ClInclude Include="src\server\timer.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
