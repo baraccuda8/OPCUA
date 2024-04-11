@@ -73,12 +73,14 @@
     <OutDir>lib\$(Configuration)$(PlatformArchitecture)$(PlatformToolset)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IntDir>lib\$(Configuration)$(PlatformArchitecture)$(PlatformToolset)\$(ProjectName)\</IntDir>
-    <OutDir>lib\$(Configuration)$(PlatformArchitecture)$(PlatformToolset)\</OutDir>
+    <IntDir>dir\$(ProjectName)\$(PlatformArchitecture)\$(Configuration)\</IntDir>
+    <OutDir>Lib\</OutDir>
+    <TargetName>$(ProjectName)_$(PlatformArchitecture)_$(Configuration)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IntDir>lib\$(Configuration)$(PlatformArchitecture)$(PlatformToolset)\$(ProjectName)\</IntDir>
-    <OutDir>lib\$(Configuration)$(PlatformArchitecture)$(PlatformToolset)\</OutDir>
+    <IntDir>dir\$(ProjectName)\$(PlatformArchitecture)\$(Configuration)\</IntDir>
+    <OutDir>Lib\</OutDir>
+    <TargetName>$(ProjectName)_$(PlatformArchitecture)_$(Configuration)</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -118,6 +120,8 @@
       <PreprocessorDefinitions>WIN32;_WINDOWS;_WINSOCK_DEPRECATED_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0600;_DEBUG</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>D:\boost_1_81_0;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -133,6 +137,8 @@
       <PreprocessorDefinitions>WIN32;_WINDOWS;_WINSOCK_DEPRECATED_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0600;NDEBUG</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>D:\boost_1_81_0;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
